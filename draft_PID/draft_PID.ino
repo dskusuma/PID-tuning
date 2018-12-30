@@ -1,6 +1,7 @@
 // import library
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 // Global Variables
 
@@ -22,8 +23,9 @@ void loop() {
   
 }
 
-
-// FUNGSI
+// ================================
+//  1.FUNGSI DARI DRAFT SEBELUMNYA
+// ================================
 
 // Td (Waktu tunda / delay)
 float hitung_Td(float zeta, float omega_n) {
@@ -44,3 +46,30 @@ float hitung_Tp(float zeta, float omega_n) {
   float Tp;
   Tp = CONST_z / (omega_n * sqrt(CONST_z - pow(zeta,2)));
 }
+
+// Ts (Waktu atur / setting time)
+float hitung_Ts(float persen, float zeta, float omega_n) {
+  float Ts;  
+  int var_ts;
+
+  if (persen == 0.5) {
+    // persen = 0.5%
+    var_ts = 5;
+  } else if (persen == 2.0) {
+    // persen = 2%
+    var_ts = 4;
+  } else {
+    // persen = 5%
+    var_ts = 3;
+  }
+
+  Ts = var_ts / (zeta * omega_n);
+}
+
+// ================================
+// --------------------------------
+
+
+// ================================
+//   FUNGSI DARI DRAFT SEBELUMNYA
+// ================================
