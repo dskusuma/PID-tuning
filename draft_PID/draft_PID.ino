@@ -19,8 +19,11 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // manggil fungsi.
+  // di void setup ada: pin1, gnd, 5v, pin16, pin 17, gnd2
+  //  Serial.println(exp(1));
   
+
 }
 
 // ================================
